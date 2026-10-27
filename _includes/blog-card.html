@@ -1,9 +1,4 @@
-{%- comment %}
-One entry of the blog overview, styled as a section navigation tile.
-Parameters: post (a document of the blog collection).
-{%- endcomment %}
 {%- assign post = include.post %}
-{%- comment %} Without a description, show the first words of the post, skipping a heading at the top {%- endcomment %}
 {%- assign excerpt = post.description %}
 {%- unless excerpt %}
 {%- assign body = post.content | strip %}

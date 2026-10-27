@@ -1,10 +1,3 @@
-{%- comment %}
-Overview of the blog collection, newest post first.
-Parameters:
-  limit: only show the given number of most recent posts, without year headings
-  caption: set to true to show a link to the blog overview page below the list
-  caption_url: url of the blog overview page (default: the url in _data/sidebars/blog.yml)
-{%- endcomment %}
 {%- assign blog_posts = site.blog | sort: "date" | reverse %}
 <div class="blog">
   {%- if include.limit %}

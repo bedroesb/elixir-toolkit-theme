@@ -1,11 +1,6 @@
 ---
 layout: default
 ---
-{%- comment %}
-Layout for a single blog post: the title, the publication date and the
-description, followed by the content and links to the neighbouring posts.
-Contributors are shown in the metadata panel at the bottom of the page.
-{%- endcomment %}
 {%- assign subtitle = page.type | replace: "_", " " %}
 <main id="main" class="min-vh-100{%- if page.toc or page.toc == nil or page.page_img %} add-grid{% endif %}">
     <div id="intro">

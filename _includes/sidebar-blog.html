@@ -1,12 +1,6 @@
-{%- comment %}
-Auto-generated blog sidebar: every post of the `blog` collection, newest first,
-grouped in a collapsible section per year. Included by sidebar.html for every
-page that sets `sidebar: blog`, so the list never has to be maintained by hand.
-{%- endcomment %}
 {%- assign sidebar = site.data.sidebars.blog %}
 {%- assign blog_posts = site.blog | sort: "date" | reverse %}
 {%- assign blog_years = blog_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-{%- comment %} Only open the year of the current post; every year stays collapsed on the overview page {%- endcomment %}
 {%- assign open_year = nil %}
 {%- for post in blog_posts %}
 {%- if page.url == post.url %}{%- assign open_year = post.date | date: '%Y' %}{%- endif %}

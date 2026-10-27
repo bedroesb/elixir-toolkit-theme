@@ -15,7 +15,6 @@
         <a class="text-start d-block sidebar-title text-dark{% if page.url == sidebar.title_url %} active{%- endif %}{% unless sidebar.title_url %} disabled{%- endunless %}" {%- if sidebar.title_url %}href="{{ sidebar.title_url | relative_url }}"{%- endif %}>{{sidebar.title}} {{sidebar.version}}</a>
     </div>    
     {%- endif %}
-    {%- comment %} The blog sidebar is generated from the blog collection instead of a yml file {%- endcomment %}
     {%- if page.sidebar == 'blog' %}
     {% include sidebar-blog.html %}
     {%- else %}
